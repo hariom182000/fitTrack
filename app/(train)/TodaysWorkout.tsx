@@ -40,7 +40,7 @@ export default function TodaysWorkout() {
   return (
     <SafeAreaView className="flex-1 p-4 bg-silverBlack h-full">
       <Text className="text-xl font-bold text-white mb-4">Todays Workouts</Text>
-      {workouts.length == 0 ? (
+      {workouts.length == 0 ?  (
       < NoWorkoutsCard/>
       ) : (
         <View>
