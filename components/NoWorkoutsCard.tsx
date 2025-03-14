@@ -9,7 +9,7 @@ const NoWorkoutsCard = () => {
         No workout? No excuses. Get up and move!
       </Text>
       <View className="flex-row justify-center items-center mt-24">
-        <BenchPressSvg fill={"#C2C2C2"} height={450} width={450} />
+        <BenchPressSvg fill={"#C2C2C2"} height={450} width={450}  />
       </View>
       <Text className="text-white">
         If you’re waiting for a sign… this is it!

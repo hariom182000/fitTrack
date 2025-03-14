@@ -19,7 +19,7 @@ export const MUSCLES = [
   SHOULDERS,
   FOREARMS,
   GLUTES,
-  ABS
+  ABS,
 ];
 
 export const EXCERICSE_FOR_MUSCLE = {
@@ -108,3 +108,28 @@ export const MUSCLE_MESSAGES = {
   [CALVES]: "Calves of steel, wheels for real!",
   [ABS]: "Abs-solutely necessary!",
 };
+
+export const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export const DAYS = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+];

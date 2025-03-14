@@ -23,6 +23,10 @@ export default function TrainLayout() {
         name="muscle/[muscle]"
         options={{ headerShown: false }}
       ></Stack.Screen>
+      <Stack.Screen
+        name="ViewWorkout"
+        options={{ headerShown: false }}
+      ></Stack.Screen>
     </Stack>
   );
 }
