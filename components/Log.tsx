@@ -2,27 +2,29 @@ import React, { useState } from "react";
 import { Text, TouchableOpacity, View, Modal, Pressable } from "react-native";
 import MuscleIcon from "./MuscleIcon";
 import DeleteSvg from "./svgs/DeleteSvg";
+import { LogProps } from "@/types";
 
-export default function Log({ log, deleteLog }) {
+export default function Log({ log, deleteLog }: LogProps) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   return (
-    <View className="px-4 py-3 bg-silverGrey rounded-lg m-4 flex-row justify-between">
+    <View className="px-4 py-1 bg-silverGrey rounded-lg m-3 flex-row justify-between">
       <View>
         <View className="flex-row items-center">
           <Text className="text-white font-bold">
             {log.targetMuscle.toUpperCase()}
           </Text>
-          <View className="ml-4">
+          <View className="items-center ml-4">
             <MuscleIcon muscle={log.targetMuscle} width={40} height={40} />
           </View>
         </View>
+        <Text className="text-white mt-1 font-semibold">{log.exercise}</Text>
         <Text className="text-silverSlate mt-1 font-semibold">
           {log.weightLifted}kg x {log.repsDone} reps
         </Text>
       </View>
       <TouchableOpacity
-        className="mt-4"
+        className="flex-col justify-center"
         onPress={() => setShowDeleteModal(true)}
       >
         <DeleteSvg width={40} height={40} fill={"#C2C2C2"} />

@@ -28,6 +28,7 @@ PRAGMA journal_mode = 'wal';
 CREATE TABLE Lifts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     targetMuscle TEXT NOT NULL,
+    exercise TEXT NOT NULL,
     weightLifted INTEGER NOT NULL,
     repsDone INTEGER NOT NULL,
     date INTEGER NOT NULL

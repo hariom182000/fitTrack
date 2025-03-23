@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { FlatList, Modal, Pressable, Text, View } from "react-native";
 
-const Dropdown = ({ options, selectedValue, onSelect }) => {
+const Dropdown = ({ options, selectedValue, placeHolderMessage,onSelect }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View className="my-3">
       <Pressable
-        className="bg-silverGrey p-3 rounded-lg "
+        className={`bg-silverGrey p-3 rounded-lg`}
         onPress={() => setModalVisible(true)}
       >
-        <Text className="text-silverSlate">
-          {selectedValue || "Select an Exercise"}
+        <Text
+          className={` ${selectedValue ? "text-white" : "text-silverSlate"}`}
+        >
+          {selectedValue ? selectedValue :placeHolderMessage}
         </Text>
       </Pressable>
       <Modal visible={modalVisible} transparent animationType="fade">

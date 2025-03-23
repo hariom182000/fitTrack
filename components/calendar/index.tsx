@@ -11,7 +11,9 @@ export default function Calendar({}) {
   const years = getYears();
 
   const [selectedYear, setSelectedYear] = useState(years[0]);
-  const [selectedMonth, setSelectedMonth] = useState("January");
+  const [selectedMonth, setSelectedMonth] = useState(
+    MONTHS[new Date(Date.now()).getMonth()]
+  );
   const router = useRouter();
 
   const datesGrid = useMemo(() => {

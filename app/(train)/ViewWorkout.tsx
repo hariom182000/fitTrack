@@ -25,7 +25,6 @@ export default function ViewWorkout() {
       LIMIT,
       page * LIMIT
     );
-    console.log("lifts are", lifts);
     setWorkouts((prevWorkouts) => [...prevWorkouts, ...lifts]);
   };
 

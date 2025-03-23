@@ -1,4 +1,8 @@
 import Card from "@/components/Card";
+import CalendarSvg from "@/components/svgs/calendarSvg";
+import DumbellSvg from "@/components/svgs/DumbellSvg";
+import GraphSvg from "@/components/svgs/GraphSvg";
+import LogWorkoutSvg from "@/components/svgs/LogWorkoutSvg";
 import { Link } from "expo-router";
 import React, { Component } from "react";
 import { Text, View } from "react-native";
@@ -18,6 +22,9 @@ export default class lifting extends Component {
                 marginVertical: "10%",
                 marginHorizontal: "2%",
               }}
+              iconComponent={
+                <LogWorkoutSvg fill={"#C2C2C2"} width={80} height={80} />
+              }
             />
           </Link>
 
@@ -29,6 +36,9 @@ export default class lifting extends Component {
                 marginVertical: "10%",
                 marginHorizontal: "2%",
               }}
+              iconComponent={
+                <CalendarSvg fill={"#C2C2C2"} width={80} height={80} />
+              }
             />
           </Link>
           <Link href="/(train)/TodaysWorkout" asChild>
@@ -39,6 +49,9 @@ export default class lifting extends Component {
                 marginVertical: "10%",
                 marginHorizontal: "2%",
               }}
+              iconComponent={
+                <DumbellSvg fill={"#C2C2C2"} width={80} height={80} />
+              }
             />
           </Link>
           <Link href="/(train)/ViewProgress" asChild>
@@ -49,6 +62,9 @@ export default class lifting extends Component {
                 marginVertical: "10%",
                 marginHorizontal: "2%",
               }}
+              iconComponent={
+                <GraphSvg fill={"#C2C2C2"} width={80} height={80} />
+              }
             />
           </Link>
         </View>

@@ -3,16 +3,18 @@ import { TextInput, View } from "react-native";
 import Dropdown from "./DropDown";
 import { EXCERICSE_FOR_MUSCLE } from "@/constants";
 import Button from "./Button";
+import { LogEntryProps } from "@/types";
 
-export default function LogEntry({ targetMuscle, liftData, onChange,onSubmit }) {
+export default function LogEntry({ targetMuscle, liftData, onChange, onSubmit }: LogEntryProps) {
   return (
     <View className="z-40">
       <Dropdown
-        onSelect={(selectedExercise) => {
+        onSelect={(selectedExercise: string) => {
           onChange({ ...liftData, selectedExercise: selectedExercise });
         }}
+        placeHolderMessage={"select exercise"}
         selectedValue={liftData.selectedExercise || ""}
-        options={EXCERICSE_FOR_MUSCLE[targetMuscle] || []}
+        options={EXCERICSE_FOR_MUSCLE[targetMuscle as keyof typeof EXCERICSE_FOR_MUSCLE] || []}
       />
 
       <TextInput

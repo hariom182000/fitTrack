@@ -40,6 +40,6 @@ const muscleIcons = {
 export default function MuscleIcon({ muscle, width = 300, height = 300 }) {
   const IconComponent = muscleIcons[muscle];
   return IconComponent ? (
-    <IconComponent width={width} height={height} fill={"#C2C2C2"}  />
+    <IconComponent width={width} height={height} fill={"#C2C2C2"} />
   ) : null;
 }

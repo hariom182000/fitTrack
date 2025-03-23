@@ -21,12 +21,13 @@ export default function trainMuscle() {
 
   const logEntryInDb = async () => {
     const statement = await db.prepareAsync(
-      "INSERT INTO Lifts (targetMuscle, weightLifted, repsDone, date) VALUES ($targetMuscle, $weightLifted, $repsDone, $date)"
+      "INSERT INTO Lifts (targetMuscle, exercise ,weightLifted, repsDone, date) VALUES ($targetMuscle,$exercise, $weightLifted, $repsDone, $date)"
     );
     const unixTimestamp = Math.floor(Date.now() / 1000);
     await statement
       .executeAsync({
         $targetMuscle: muscle,
+        $exercise: liftData.selectedExercise,
         $weightLifted: liftData.weightLifted,
         $repsDone: liftData.repsDone,
         $date: unixTimestamp,

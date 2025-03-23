@@ -6,8 +6,18 @@ import Log from "./Log";
 import Button from "./Button";
 import { useRouter } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
+import { WorkoutLedgerProps } from "@/types";
 
-const WorkoutLedger = ({ workouts, setWorkouts, loadMore }) => {
+interface Workout {
+  id: number;
+  targetMuscle: string;
+  exercise: string;
+  weightLifted: number;
+  repsDone: number;
+  date: number;
+}
+
+const WorkoutLedger = ({ workouts, setWorkouts, loadMore }: WorkoutLedgerProps) => {
   const router = useRouter();
   const db = useSQLiteContext();
 
@@ -37,7 +47,7 @@ const WorkoutLedger = ({ workouts, setWorkouts, loadMore }) => {
         <Button
           text={"keep Logging"}
           onPress={() => {
-            router.replace("/(train)/LogWorkouts");
+            router.back();
           }}
         />
       </View>
