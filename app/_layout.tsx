@@ -33,6 +33,12 @@ CREATE TABLE Lifts (
     repsDone INTEGER NOT NULL,
     date INTEGER NOT NULL
   );
+
+CREATE TABLE Steps (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    steps INTEGER NOT NULL,
+    date INTEGER NOT NULL
+  );
 `);
     currentDbVersion = 1;
   }

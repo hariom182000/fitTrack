@@ -12,7 +12,6 @@ export default class lifting extends Component {
   render() {
     return (
       <SafeAreaView className="bg-silverBlack h-full">
-        <Text> lifting </Text>
         <View className="flex-row flex-wrap justify-evenly">
           <Link href="/(train)/LogWorkouts" asChild>
             <Card

@@ -31,6 +31,12 @@ export interface WorkoutLedgerProps {
   loadMore: () => void;
 }
 
+export interface Steps {
+  id: number;
+  steps: number;
+  date: number;
+}
+
 export interface LogTableProps {
   children: React.ReactNode;
 } 
